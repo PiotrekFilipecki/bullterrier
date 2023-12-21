@@ -1,0 +1,364 @@
+.gallery{
+    height: 175vh;
+    // background: rgb(45, 45, 45);
+    
+    position: relative;
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    .column{
+        position: relative;
+        height: 100%;
+        width: 25%;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        .imageContainer{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            border-radius: 1vw;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+            }
+        }
+        &:nth-of-type(1){
+            top: -45%;
+        }
+        &:nth-of-type(2){
+            top: -95%;
+        }
+        &:nth-of-type(3){
+            top: -45%;
+        }
+        &:nth-of-type(4){
+            top: -75%;
+        }
+    }
+}
+.spacer{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    // gap: 5vw;
+    width: 95%;
+    min-height: 90%;
+    // // margin-top: 300px;
+    // // margin-bottom: 300px;
+    // font-size: 15vw;
+  }
+
+  .training {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    // gap: 5vw;
+    width: 95%;
+    // height: 90%;
+    // // margin-top: 300px;
+    // // margin-bottom: 300px;
+    // font-size: 15vw;
+  }
+
+.container h1 {
+    line-height: 1;
+    font-size: 10vw;
+    text-transform: uppercase;
+}
+
+
+.containerBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    button {
+        background-color: transparent;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        .arrowDown {
+            animation-name: wobble;
+              animation-iteration-count: infinite;
+            animation-duration: 8s;
+        }
+    }
+}
+
+@keyframes wobble { 
+    0% { transform: translateY(0%); } 
+    15% { transform: translateY(-25%) rotate(-5deg); } 
+    30% { transform: translateY(20%) rotate(3deg); } 
+    45% { transform: translateY(-15%) rotate(-3deg); } 
+    60% { transform: translateY(10%) rotate(2deg); } 
+    75% { transform: translateY(-5%) rotate(-1deg); } 
+    100% { transform: translateY(0%); } 
+ }
+
+.lineMask{
+    overflow: hidden;
+
+  }
+  
+  .lineMask h1{
+    margin: 0px;
+    font-weight: 700;
+  }
+
+  .trainingContent h2{
+    margin: 0px;
+    font-weight: 700;
+    font-size: 7vw;
+    line-height: 0.8;
+    text-transform: uppercase;
+  }
+
+  .lineMask p{
+    margin: 0px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+.heroLogo {
+    // position: absolute;
+    // bottom: 0rem;
+    // right: 0%;
+}
+
+.trainingImage {
+    width: 40%;
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.5);
+    }
+}
+
+.trainingContent {
+    width: 60%;
+}
+
+.trainingImg {
+    width: 100%;
+}
+
+
+// @keyframes bg-animation {
+//     0% { transform: translate(0,0) }
+//     10% { transform: translate(-5%,-5%) }
+//     20% { transform: translate(-10%,5%) }
+//     30% { transform: translate(5%,-10%) }
+//     40% { transform: translate(-5%,15%) }
+//     50% { transform: translate(-10%,5%) }
+//     60% { transform: translate(15%,0) }
+//     70% { transform: translate(0,10%) }
+//     80% { transform: translate(-15%,0) }
+//     90% { transform: translate(10%,5%) }
+//     100% { transform: translate(5%,0) }
+// }
+
+.example {
+    width: 80%;
+    height: min-content;
+    stroke: #bf4d00;
+    padding: 4%;
+    border: 1px solid #eaeef5;
+    background: black;
+}
+
+.svg path {
+    stroke: #bf4d00;
+}
+
+.headerWrapper {
+    //margin-top: 2rem;
+    align-self: flex-start;
+
+    h1 {
+        margin: 0;
+        line-height: 1;
+        font-size: 35vh;
+        letter-spacing: 2px;
+    }
+}
+
+.trainingsContent {
+    width: 50%;
+    align-self: flex-start;
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+.trainingInfo {
+    width: 100%;
+    h2 {
+        margin: 0 0 1rem 0;
+        line-height: 1;
+        font-size: 12vh;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.dayAccordion {
+    width: 95%;
+}
+
+
+
+.faq-items {
+    width: 100%;
+}
+
+.trainingDays {
+    width: 95%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trainingDay {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 10rem;
+
+
+    // h3 {
+    //     position: absolute;
+    //     font-size: 22rem;
+    //     text-transform: uppercase;
+    //     margin: 0;
+    //     letter-spacing: 2px;
+    //     top: -15rem;
+    //     left: 0;
+    //     z-index: -1;
+    // }
+}
+
+.trainingDaySection {
+    width: 48%;
+    // margin-top: 6rem;
+    //margin-bottom: 4rem;
+    position: relative;
+
+    &:nth-of-type(2) {
+        margin-top: 66vh;
+    }
+    h4 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: 2px;
+        background-color: #fff;
+        width: 50%;
+        border: 1px solid #000000;
+        border-bottom: none;
+        padding-left: 1rem;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #000000;
+        border-bottom: none;
+        li {
+            padding: 0.85rem 1rem;
+            transition: all 0.35s ease-in-out;
+            border-bottom: 1px solid #000000;
+            color: #000000;
+            background-color: transparent;
+            font-size: 1.25rem;
+
+            &:hover {
+                color: #eaeef5;
+                background-color: #000000;
+            }
+        }
+    }
+
+    .arrowSection {
+        position: absolute;
+        top: 60vh;
+        right: -5%;
+        transform: rotate(-45deg);
+    }
+}
+
+.videoWrap {
+    position: absolute;
+    right: 0%;
+    top: 15rem;
+    opacity: 0.8;
+}
+
+.summary {
+    width: 95%;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    h4 {
+        border-bottom: 1px solid #000000;
+        margin: 0;
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.summaryInner {
+    width: 100%;
+    text-align: right;
+
+    p {
+        font-size: 2rem;
+        font-weight: 300;
+        
+    }
+}
+
+.coursePrice {
+    width: 100%;
+    border-top: 1px solid #000000;
+    text-align: right;
+
+    p {
+        font-size: 8rem;
+        margin: 0;
+    }
+}

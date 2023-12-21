@@ -16,7 +16,7 @@ export default function Header() {
           />
         </a>
         <nav>
-        <a href="/">Home</a>
+        {/* <a href="/">Home</a> */}
         <a href="/szkolenia">Szkolenia</a>
         <a href="/szkolenia">Kontakt</a>
         </nav>

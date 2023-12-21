@@ -9,7 +9,7 @@ const Accordion = ({ i, expanded, setExpanded, title, description }) => {
       <motion.div
         initial={false}
         animate={{
-          backgroundColor: isOpen ? "white" : "white",
+          backgroundColor: isOpen ? "transparent" : "transparent",
         }}
         onClick={() => setExpanded(isOpen ? false : i)}
         style={{
@@ -40,7 +40,6 @@ const Accordion = ({ i, expanded, setExpanded, title, description }) => {
             }}
             transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
             style={{
-              backgroundColor: "white",
               padding: "0 2rem",
             }}
           >

@@ -194,19 +194,35 @@
 }
 
 .headerWrapper {
-    //margin-top: 2rem;
+    margin-top: 15vh;
     align-self: flex-start;
+
+    @media screen and (min-width:1440px) {
+        font-size: 35vh;
+    }
 
     h1 {
         margin: 0;
         line-height: 1;
-        font-size: 35vh;
+        font-size: 7vh;
         letter-spacing: 2px;
+
+        @media screen and (min-width:1200px) {
+            font-size: 30vh;
+        }
+
+        @media screen and (min-width:1440px) {
+            font-size: 35vh;
+        }
     }
 }
 
 .trainingsContent {
-    width: 50%;
+    width: 100%;
+
+    @media screen and (min-width:1440px) {
+        width: 50%;
+    }
     align-self: flex-start;
     p {
         font-size: 1.25rem;
@@ -216,11 +232,21 @@
 .trainingInfo {
     width: 100%;
     h2 {
-        margin: 0 0 1rem 0;
+        margin: 0 0 3rem 0;
         line-height: 1;
-        font-size: 12vh;
+        font-size: 5vh;
         text-transform: uppercase;
         text-align: center;
+
+        @media screen and (min-width:1200px) {
+            font-size: 9vh;
+            margin: 0 0 1rem 0;
+        }
+
+        @media screen and (min-width:1440px) {
+            font-size: 12vh;
+            margin: 0 0 1rem 0;
+        }
     }
 }
 
@@ -314,10 +340,18 @@
 }
 
 .videoWrap {
-    position: absolute;
-    right: 0%;
-    top: 15rem;
-    opacity: 0.8;
+    width: 100%;
+
+    iframe {
+        width: 100%;
+    }
+
+    @media screen and (min-width:1440px) {
+        position: absolute;
+        right: 0%;
+        top: 15rem;
+        opacity: 0.8;
+    }
 }
 
 .summary {

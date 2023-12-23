@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Accordion = ({ i, expanded, setExpanded, title, description }) => {
+const Accordion = ({ i, expanded, setExpanded, title, description, description2, practice }) => {
   const isOpen = i === expanded;
 
   return (
@@ -31,6 +31,7 @@ const Accordion = ({ i, expanded, setExpanded, title, description }) => {
         {isOpen && (
           <motion.section
             // Add animations for the accordion content
+            className='daySection'
             initial="collapsed"
             animate="open"
             exit="collapsed"
@@ -44,7 +45,37 @@ const Accordion = ({ i, expanded, setExpanded, title, description }) => {
             }}
           >
             {/* Add description here */}
-            {description}
+            {description && (
+                <div className='theoryWrapper'>
+                    <h4>Teoria</h4>
+            {description.map((d, index) => {
+                return (
+                    <p key={index}>{d}</p>
+                )
+            })}
+                </div>
+            )}
+
+{description2 && (
+                <div className='theoryWrapper'>
+                    <h4>Teoria</h4>
+            {description2.map((d, index) => {
+                return (
+                    <p key={index}>{d}</p>
+                )
+            })}
+                </div>
+            )}
+                        {practice && (
+                <div className='theoryWrapper'>
+                    <h4>Praktyka</h4>
+            {practice.map((d, index) => {
+                return (
+                    <p key={index}>{d}</p>
+                )
+            })}
+                </div>
+            )}
           </motion.section>
         )}
       </AnimatePresence>
